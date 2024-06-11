@@ -230,26 +230,21 @@ function NavigationGroup({
 }
 
 export const navigation: Array<NavGroup> = [
-  // {
-  //   title: 'Guides',
-  //   links: [
-  //     { title: 'Introduction', href: '/' },
-  //     { title: 'Quickstart', href: '/quickstart' },
-  //     { title: 'SDKs', href: '/sdks' },
-  //     { title: 'Authentication', href: '/authentication' },
-  //     { title: 'Pagination', href: '/pagination' },
-  //     { title: 'Errors', href: '/errors' },
-  //     { title: 'Webhooks', href: '/webhooks' },
-  //   ],
-  // },
   {
-    title: 'Resources',
+    title: 'Guides',
     links: [
-      { title: 'Tables', href: '/tables' },
-      { title: 'Users', href: '/users' },
-      { title: 'Dyno AI', href: '/ai' },
+      // { title: 'Introduction', href: '/' },
+      { title: 'Quickstart', href: '/deploy' },
     ],
   },
+  // {
+  //   title: 'Concepts',
+  //   links: [
+  //     { title: 'What is Dyno', href: '/tables' },
+  //     { title: 'Local Development', href: '/users' },
+  //     { title: 'Deployment', href: '/ai' },
+  //   ],
+  // },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
