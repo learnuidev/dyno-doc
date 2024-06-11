@@ -73,7 +73,7 @@ export const Header = forwardRef<
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+          <span className="text-xl font-bold"> dyno</span>
         </Link>
       </div>
       <div className="flex items-center gap-5">
