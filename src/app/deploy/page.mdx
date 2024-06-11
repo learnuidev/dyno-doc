@@ -1,0 +1,79 @@
+export const metadata = {
+  title: 'Deploy',
+  description:
+    'In this guide, we’ll look at deploying dyno backend and frontend.',
+}
+
+# Deployment
+
+Dyno consists of two components:
+
+1. A Serverless NodeJS backend hosted on AWS
+2. A FullStack NextJS Frontend
+
+Lets look at how we can deploy them
+
+## Deploying Serverless NodeJS Backend
+
+Clone the backend repository:
+
+```bash
+git clone https://github.com/learnuidev/dyno-api.git
+```
+
+Install Dependencies:
+
+```bash
+npm i
+```
+
+Deploy
+
+```bash
+npx sls deploy
+```
+
+After deploying, you will need to go to Cognito and copy UserPool Id and UserPoolClient Id. This will be needed when running the frontend
+
+## Running NextJS Frontend Locally
+
+Populate `.env.local` file
+
+```{{title: ".env.local"}}
+# 1. AWS
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+
+# 2. AWS Cognito
+NEXT_PUBLIC_AWS_REGION=
+# NEXT_PUBLIC_AWS_COGNITO_USERPOOL_ID=
+NEXT_PUBLIC_AWS_COGNITO_USERPOOL_ID=
+NEXT_PUBLIC_AWS_COGNITO_WEBCLIENT_ID=
+NEXT_PUBLIC_AWS_APPSYNC_GRAPHQL_ENDPOINT=
+
+# 3. FONT AWESOME
+FONT_AWESOME_TOKEN=
+```
+
+Please don't commit your Protocol password to GitHub!
+
+## OAuth2 with bearer token
+
+The recommended way to authenticate with the Protocol API is by using OAuth2. When establishing a connection using OAuth2, you will need your access token — you will find it in the [Protocol dashboard](#) under API settings. Here's how to add the token to the request header using cURL:
+
+```bash {{ title: 'Example request with bearer token' }}
+curl https://api.protocol.chat/v1/conversations \
+  -H "Authorization: Bearer {token}"
+```
+
+Always keep your token safe and reset it if you suspect it has been compromised.
+
+## Using an SDK
+
+If you use one of our official SDKs, you won't have to worry about any of the above — fetch your access token from the [Protocol dashboard](#) under API settings, and the client library will take care of the rest. All the client libraries use OAuth2 behind the scenes.
+
+<div className="not-prose">
+  <Button href="/sdks" variant="text" arrow="right">
+    <>Check out our list of first-party SDKs</>
+  </Button>
+</div>
