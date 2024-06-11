@@ -4,12 +4,7 @@ export const metadata = {
     'In this guide, we’ll look at deploying dyno backend and frontend.',
 }
 
-# Development & Deployment
-
-Dyno consists of two components:
-
-1. A Serverless NodeJS backend hosted on AWS
-2. A FullStack NextJS Frontend
+# Deployment
 
 In this tutorial you will learn:
 
@@ -17,9 +12,7 @@ In this tutorial you will learn:
 2. How to Run NextJS Frontend Locally
 3. How to Deploying NextJS Frontend to Vercel
 
-Lets look at how we can deploy them
-
-## Deploying Serverless NodeJS Backend
+## 1. Deploying Serverless NodeJS Backend
 
 Clone the backend repository:
 
@@ -41,7 +34,9 @@ npx sls deploy
 
 After deploying, you will need to go to Cognito and copy UserPool Id and UserPoolClient Id. This will be needed when running the frontend
 
-## Running NextJS Frontend Locally
+---
+
+## 2. Running NextJS Frontend Locally
 
 Populate `.env.local` file
 
@@ -76,7 +71,9 @@ Run Locally:
 npm run dev
 ```
 
-## Deploying NextJS Frontend to Vercel
+---
+
+## 3. Deploying NextJS Frontend to Vercel
 
 First check if the build passes locally
 
