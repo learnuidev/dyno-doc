@@ -245,11 +245,9 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Resources',
     links: [
-      { title: 'Components', href: '/components' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'Tables', href: '/tables' },
+      { title: 'Users', href: '/users' },
+      { title: 'Dyno AI', href: '/ai' },
     ],
   },
 ]

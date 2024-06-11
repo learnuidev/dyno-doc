@@ -20,10 +20,10 @@ interface Resource {
 
 export const resources: Array<Resource> = [
   {
-    href: '/components',
-    name: 'Components',
+    href: '/tables',
+    name: 'Tables',
     description:
-      'Learn about the component model and how to create, retrieve, update, delete, and list components.',
+      'Learn about the table model and how to create, clone, retrieve, update, delete, and list tables.',
     icon: UserIcon,
     pattern: {
       y: 16,
@@ -34,10 +34,10 @@ export const resources: Array<Resource> = [
     },
   },
   {
-    href: '/conversations',
-    name: 'Conversations',
+    href: '/users',
+    name: 'Users',
     description:
-      'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
+      'Learn about the conversation user and how to create, retrieve, update, delete, and list users.',
     icon: ChatBubbleIcon,
     pattern: {
       y: -6,
@@ -62,9 +62,9 @@ export const resources: Array<Resource> = [
     },
   },
   {
-    href: '/mandarino-ai',
-    name: 'Mandarino AI',
-    description: 'Learn about the Mandarino AI API',
+    href: '/ai',
+    name: 'Dyno AI',
+    description: 'Learn about the Dyno AI',
     icon: UsersIcon,
     pattern: {
       y: 22,
